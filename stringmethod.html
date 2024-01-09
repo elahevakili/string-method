@@ -1,0 +1,416 @@
+<html>
+    <link href="stringmethod.css" rel="stylesheet"> 
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script href="bootstrap/bootstrap.min.js"></script>
+    <script href="bootstrap/bootstrap.bundle.js.map"></script>   
+     <head>
+        <meta encoding="UTF-8"/>
+        <title> string method </title>
+    </head>
+    <script>
+        
+        function lenght () {
+            let A = document.getElementById("sl").value;
+            document.getElementById("lenght-result").innerHTML = A.length;
+            console.log(A.length);
+
+        }
+
+        function slice() {
+            let A = document.getElementById("ss").value;
+            let B = A.slice(1,4);
+            document.getElementById("slice-result").innerHTML = B;
+            console.log(B)
+        }
+        
+        function substring() {
+            let A = document.getElementById("subs").value;
+            let B = A.substring(2,7);
+            document.getElementById("substring-result").innerHTML = B;
+            console.log(B)
+
+        }
+
+        function replace() {
+            let A = document.getElementById("rs").value;
+            console.log(A);
+            let z = "Hi programmer you are testing replace string method";
+            let b = z.replace("programmer", A);
+            document.getElementById("replace-result").innerHTML = b;
+        }
+
+        function replaceAll() {
+            let A = document.getElementById("ras").value;
+            //how can i use A in /A/g and change all my input to Repalce all method becouse we dont know what will be write 
+            let B =  A.replace(/A/g,"Reaplace all method");
+            document.getElementById("replaec-all-result").innerHTML = B;
+            console.log(B)
+        }
+
+        function uppercase () {
+            let A = document.getElementById("ucs").value;
+            let B = A.toUpperCase();
+            document.getElementById("uppercase-result").innerHTML = B;
+            console.log(B)
+        }
+
+        function lowercase() {
+            let A = document.getElementById("lcs").value;
+            let B = A.toLowerCase();
+            document.getElementById("lowercase-result").innerHTML= B;
+            console.log(B)
+            
+        }
+
+        function concat() {
+            let A = document.getElementById("cs").value;
+            let C = document.getElementById("cs1").value;
+            //Cant we use + instesad of "" for concat?
+            let B = A.concat("", C);
+            document.getElementById("concat-result").innerHTML= B;
+            console.log(B)
+            
+        }
+
+        function trim() {
+            let A = document.getElementById("ts").value;
+            let B = A.trim();
+            document.getElementById("trimstring-result").innerHTML= B;
+            console.log(B)
+            
+        }
+        function trimstart1() {
+            let A = document.getElementById("tss").value;
+            let B = A.trimStart();
+            document.getElementById("trimstart-result").innerHTML= B;
+            console.log(B)
+            
+        }
+
+        function trimend() {
+            let A = document.getElementById("tes").value;
+            let B = A.trimEnd();
+            document.getElementById("trimend-result").innerHTML= B;
+            console.log(B)
+            
+        }
+        
+        function paddingstring() {
+            let A = document.getElementById("pss").value;
+            let B = A.padStart(3,"0");
+            document.getElementById("padingstart-result").innerHTML= B;
+            console.log(B)
+        }
+
+        function paddingNumber() {
+            let A = document.getElementById("pns").value;
+            let B = A.toString();
+            let C = B.padStart(5,"*");
+            document.getElementById("padingnumber-result").innerHTML= C;
+            console.log(C)
+        }
+
+        function CharAt() {
+            let A = document.getElementById("cas").value;
+            let B = A.charAt(1);
+            document.getElementById("charat-result").innerHTML= B;
+            console.log(B)
+        }
+
+        function charcodeAt() {
+            let A = document.getElementById("at").value;
+            let B = A.charCodeAt(3);
+            document.getElementById("charcodeat-result").innerHTML= B;
+            console.log(B)
+
+            
+        }
+
+        function Property() {
+            let A = document.getElementById("pp").value;
+            let B = A[2];
+            document.getElementById("property-result").innerHTML= B;
+            console.log(B)
+
+        }
+
+        function split() {
+            let A = document.getElementById("sp").value;
+            const myarray = A.split(".");
+            document.getElementById("split-result").innerHTML= myarray[0];
+            console.log(myarray)
+        }
+
+
+
+
+
+
+  </script>
+    <body class="body">
+        <div class="countainer mt-5">
+            <div class="row">
+                <div>
+                    <h1> <b> write atleast </b> <a href="#" id="style-2" data-replace="15 charactors in every input"><span>  15 charactors in every input</span></a></h1>
+            <table>
+                <tr>
+                    <th> string method </th>
+                    <th> method </th>
+                    <th> result </th>
+                </tr>
+    
+                <tr>
+                    <td class="td"> string lenght </td>
+                    <td> 
+                        <input type="text" id="sl"  class="form-control" >
+                    </td>
+                    <td>
+                        <button onclick="lenght()" class="buttton" role="button"> show result </button>
+                     </td>
+                    <td class="td">
+                        result : <label id="lenght-result">  -------------  </label>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="td"> string slice </td>
+                    <td>
+                        <input type="text" id="ss"  class="form-control">
+                    </td>
+                    <td>
+                        <button onclick="slice()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result : <label id="slice-result">  -------------  </label>
+                    </td>
+                </tr>
+     
+                <tr>
+                    <td class="td"> substring </td>
+                    <td>
+                        <input type="text" id="subs"  class="form-control"> 
+                    </td>
+                    <td>
+                        <button onclick="substring()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result : <label id="substring-result"> ------------- </label>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="td"> replace string </td>
+                    <td>
+                        <input type="text" id="rs"  class="form-control">
+                    </td>
+                    <td>
+                        <button onclick="replace()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result : <label id="replace-result"> -------------</label> 
+                
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="td"> replace all string </td>
+                    <td>
+                        <input type="text" id="ras"  class="form-control"> 
+                    </td>
+                    <td>
+                        <button onclick="replaceAll()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result : <label id="replaec-all-result">-------------</label> (please type <b>"lesson"</b>three time)
+                    </td>
+                </tr>
+    
+    
+    
+                <tr>
+                    <td class="td"> upper case string </td>
+                    <td>
+                        <input type="text" id="ucs"  class="form-control">
+                    </td>
+                    <td>
+                        <button onclick="uppercase()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result : <label id="uppercase-result">-------------</label>
+                    </td>
+                </tr>
+    
+    
+    
+    
+                <tr>
+                    <td class="td"> lower case result </td>
+                    <td>
+                        <input type="text" id="lcs"  class="form-control">
+                    </td>
+                    <td>
+                        <button onclick="lowercase()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result : <Label id="lowercase-result">-------------</Label>
+                    </td>
+                </tr>
+    
+    
+                <tr>
+                    <td class="td"> concat string </td>
+                    <td>
+                        <input type="text" id="cs"  class="form-control"><br>
+                        <input type="text" id="cs1"  class="form-control">
+    
+    
+                    </td>
+                    <td>
+                        <button onclick="concat()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result :<label id="concat-result">-------------</label>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="td"> Trim string </td>
+                    <td> 
+                        <input type="text" id="ts"  class="form-control">
+                    </td>
+                    <td>
+                        <button onclick="trim()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result :<label id="trimstring-result">-------------</label>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="td"> Trim start </td>
+                    <td> 
+                        <input type="text" id="tss"  class="form-control">
+                    </td>
+                    <td>
+                        <button onclick="trimstart1()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result :<label id="trimstart-result">-------------</label>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="td"> Trim end </td>
+                    <td> 
+                        <input type="text" id="tes"  class="form-control" >
+                    </td>
+                    <td>
+                        <button onclick="trimend()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result :<label id="trimend-result">-------------</label>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="td"> pading string </td>
+                    <td> 
+                        <input type="text" id="pss"  class="form-control">
+                    </td>
+                    <td>
+                        <button onclick="paddingstring()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result :<label id="padingstart-result">-------------</label> ( Just write <b>one letter</b>)
+                    </td>
+                </tr>
+    
+    
+                <tr>
+                    <td class="td"> pading number string </td>
+                    <td> 
+                        <input type="number" id="pns"  class="form-control">
+                    </td>
+                    <td>
+                        <button onclick="paddingNumber()" class="buttton"> show result </button>
+                     </td>
+                    <td class="td">
+                        result :<label id="padingnumber-result">-------------</label> ( please type <b> a Number</b>)
+                    </td>
+                </tr>
+    
+    
+                <tr>
+                    <td class="td"> char At</td>
+                    <td> 
+                        <input type="text" id="cas"  class="form-control">
+                    </td>
+                    <td>
+                       <button onclick="CharAt()" class="buttton"> show result </button>
+                    </td>
+                    <td class="td">
+                        result :<label id="charat-result">-------------</label>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="td"> char code At</td>
+                    <td> 
+                        <input type="text" id="at"  class="form-control">
+                    </td>
+                    <td>
+                        <button onclick="charcodeAt()" class="buttton"> show result </button>
+                     </td> 
+    
+                    <td class="td">
+                        result :<label id="charcodeat-result">-------------</label>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="td"> property</td>
+                    <td> 
+                        <input type="text" id="pp"  class="form-control">
+                    </td>
+                    <td>
+                       <button onclick="Property()" class="buttton"> show result </button>
+                    </td>
+                    <td class="td">
+                        result :<label id="property-result">-------------</label>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="td"> Split</td>
+                    <td> 
+                        <input type="text" id="sp"  class="form-control">
+                    </td>
+                    <td>
+                       <button onclick="split()" class="buttton" > show result </button>
+                    </td>
+                    <td class="td">
+                        result :<label id="split-result">-------------</label>
+                    </td>
+                </tr>
+    
+    
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+    
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+    
+            </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
